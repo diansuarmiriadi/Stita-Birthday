@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stita's Birthday!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Cherry+Bomb+One&family=Chewy&family=Dancing+Script:wght@400..700&family=Itim&family=Londrina+Solid:wght@100;300;400;900&family=Permanent+Marker&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Titan+One&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      background-color: #ffc0e3da;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      color: #be1369;
+      font-size: 3em;
+      margin-top: 30px;
+    }
+    p {
+      color: #555;
+      font-family: "Bree Serif", serif;
+      font-size: 1em;
+    }
+
+    /* Balon */
+    .balloons {
+      position: relative;
+      width: 100%;
+      height: 200px;
+    }
+    .balloon {
+      width: 80px;
+      height: 120px;
+      background-color: #ff69b4;
+      border-radius: 50% 50% 0 0;
+      position: absolute;
+      bottom: 0;
+      animation: float 3s ease-in-out infinite;
+    }
+    .balloon::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -50px;
+      width: 2px;
+      height: 50px;
+      background-color: #555;
+      transform: translateX(-50%);
+    }
+    .balloon:nth-child(1) {
+      left: 20%;
+      animation-delay: 0s;
+    }
+    .balloon:nth-child(2) {
+      left: 50%;
+      background-color: #b987eb;
+      animation-delay: 0.5s;
+    }
+    .balloon:nth-child(3) {
+      left: 80%;
+      background-color: #ff69b4;
+      animation-delay: 1s;
+    }
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-30px);
+      }
+    }
+
+    /* Kue */
+    .cake {
+      margin: 20px auto;
+      position: relative;
+      width: 150px; /* Ukuran lebih kecil */
+    }
+    .layer {
+      width: 100%;
+      height: 40px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .layer1 {
+      background-color: #ff69b4;
+    }
+    .layer2 {
+      background-color: #ffcc99;
+    }
+    .layer3 {
+      background-color: #87ceeb;
+    }
+    .candles {
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 5px;
+    }
+    .candle {
+      width: 15px;
+      height: 40px;
+      background-color: #fff;
+      border-radius: 5px;
+      position: relative;
+    }
+    .candle:before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      width: 10px;
+      height: 20px;
+      background: orange;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      animation: flicker 0.3s infinite alternate;
+    }
+    @keyframes flicker {
+      from {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+      }
+      to {
+        opacity: 0.7;
+        transform: translateX(-50%) scale(1.1);
+      }
+    }
+
+    /* Foto */
+    img {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Confetti */
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #ff69b4;
+      animation: fall 3s linear infinite;
+    }
+    .confetti:nth-child(2n) {
+      background-color: #87ceeb;
+    }
+    .confetti:nth-child(3n) {
+      background-color: #ffcc99;
+    }
+    @keyframes fall {
+      from {
+        transform: translateY(-100vh);
+        left: calc(10% + 80% * random());
+        opacity: 1;
+      }
+      to {
+        transform: translateY(100vh);
+        left: calc(10% + 80% * random());
+        opacity: 0;
+      }
+    }
+
+    /* Tombol */
+    button {
+      padding: 10px 20px;
+      background-color: #cf8de6;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 20px;
+      
+    }
+    button:hover {
+      background-color: #ff85c0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Birthday, Tita! 💗💝</h1>
+  <p>Cheers to another fabulous year of adventures, laughter, and friendship 🎊</p>
+  <p>May ur birthday be a reflection of how amazing u are!</p>
+  <p>Selamat beranjak dewasa, Dekta <3</p>
+
+  <!-- Animasi Balon -->
+  <div class="balloons">
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+  </div>
+
+
+  <!-- Foto -->
+  <img src="Assets/Images/Tita2.jpg" alt="Birthday Image">
+
+  <audio autoplay loop>
+    <source src="Assets/Sounds/Birthday Inst.m4a" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+    <!-- Kue Ulang Tahun -->
+  <div class="cake">
+    <!-- Lapisan Kue -->
+    <div class="layer layer1"></div>
+    <div class="layer layer2"></div>
+    <div class="layer layer3"></div>
+    <!-- Lilin -->
+    <div class="candles">
+      <div class="candle"></div>
+      <div class="candle"></div>
+      <div class="candle"></div>
+    </div>
+  </div>
+
+  <!-- Tombol -->
+  <button onclick="showMessage()">Click for Surprise</button>
+
+  <!-- Confetti -->
+  <script>
+    // Fungsi untuk membuat confetti
+    function createConfetti() {
+      const body = document.body;
+      for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.animationDelay = Math.random() * 3 + 's';
+        confetti.style.backgroundColor =
+          ['#ff69b4', '#87ceeb', '#ffcc99'][Math.floor(Math.random() * 3)];
+        body.appendChild(confetti);
+      }
+    }
+
+    // Fungsi kejutan
+    function showMessage() {
+      alert("May your day be filled with joy and magic! 🎉🎂");
+    }
+
+    // Panggil fungsi confetti
+    createConfetti();
+  </script>
+</body>
+</html>
